@@ -17,6 +17,6 @@ app.get("/dtv/current-service", (req, res) => {
 });
 
 
-app.listen(4000, () => {
+app.listen(80, () => {
 	console.log("hello");
 });
