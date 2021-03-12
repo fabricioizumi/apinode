@@ -1,12 +1,22 @@
 {
-  "name": "nodeapp",
+  "name": "apinode",
   "version": "0.0.1",
-  "main":"test.js",
-  "author":"Test",
-  "description": "For test ",
-  "dependencies": {
-    "express": "latest"
-	
-  }
-
+  "description": "API test with express",
+  "main": "app2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabricioizumi/apinode.git"
+  },
+  "author": "Fabricio Izumi Bandeira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fabricioizumi/apinode/issues"
+  },
+  "homepage": "https://github.com/fabricioizumi/apinode#readme",
+  "dependecies":{
+	"express": "4.17.1"
+  }	
 }
