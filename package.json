@@ -5,7 +5,7 @@
   "main": "app2.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app2.js"
+    "start": "node app/app2.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
     "url": "https://github.com/fabricioizumi/apinode/issues"
   },
   "homepage": "https://github.com/fabricioizumi/apinode#readme",
-  "dependecies":{
+  "dependencies":{
 	"express": "4.17.1"
   }	
 }
