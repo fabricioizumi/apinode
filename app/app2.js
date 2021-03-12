@@ -16,7 +16,8 @@ app.get("/dtv/current-service", (req, res) => {
 	);
 });
 
+const PORT = process.env.PORT || 3000
 
-app.listen(80, () => {
+app.listen(PORT, () => {
 	console.log("hello");
 });
