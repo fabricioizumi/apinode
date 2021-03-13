@@ -19,7 +19,7 @@ app.get("/dtv/current-service", (req, res) => {
 app.get("/dtv/15.3.3/apps", (req,res) => {
 	res.json({ apps:[
 		{
-			appid:"0x12",
+			appid:"65570",
 			name: "TesteApp",
 			type: "Ginga-HTML5",
 			controlCode: "AUTOSTART",
