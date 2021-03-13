@@ -16,6 +16,19 @@ app.get("/dtv/current-service", (req, res) => {
 	);
 });
 
+app.get("/dtv/15.3.3/apps", (req,res) => {
+	res.json({ apps:[
+		{
+			appid:"0x12",
+			name: "TesteApp",
+			type: "Ginga-HTML5",
+			controlCode: "AUTOSTART",
+			state: "running",
+			entryPoint: "index.html"	
+		}
+	]});
+});
+
 const PORT = process.env.PORT || 3000
 
 app.listen(PORT, () => {
