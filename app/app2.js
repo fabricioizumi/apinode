@@ -29,6 +29,10 @@ app.get("/dtv/15.3.3/apps", (req,res) => {
 	]});
 });
 
+app.get("/dtv/15.3.1/apps", (req,res) => {
+	res.json({ apps:[]});
+});
+
 const PORT = process.env.PORT || 3000
 
 app.listen(PORT, () => {
