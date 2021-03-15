@@ -16,6 +16,22 @@ app.get("/dtv/current-service", (req, res) => {
 	);
 });
 
+app.get("/dtv/current-service/apps", (req, res) => {
+	res.json(
+		{ 
+		   apps:[{
+			appid: "65570",
+			name: "A Fazenda",
+			type: "Ginga-NCL",
+			controlCode: "AUTOSTART",
+			state: "running",
+			entryPoint: "main.ncl"
+		  }]
+		}
+	);
+});
+
+
 app.get("/dtv/15.3.3/apps", (req,res) => {
 	res.json({ apps:[
 		{
