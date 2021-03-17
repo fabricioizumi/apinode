@@ -138,7 +138,7 @@ app.get("/dtv/15.3.3/apps/65570", (req,res) => {
 		{
 			"appid": "65570",					  
 			"name": "TesteApp",
-			"type": "Ginga-HTMK",
+			"type": "Ginga-HTML",
 			"controlCode": "AUTOSTART",					  
 			"state": "running",				
 			"entryPoint": "index.html"
