@@ -134,16 +134,16 @@ app.get("/dtv/15.3.3/apps", (req,res) => {
 });
 
 app.get("/dtv/15.3.3/apps/65570", (req,res) => {
-	res.json({ apps:[
+	res.json(
 		{
 			"appid": "65570",					  
-			"name": "TestApp",				
-			"type": "Ginga-HTML",				
+			"name": "TesteApp",
+			"type": "Ginga-HTMK",
 			"controlCode": "AUTOSTART",					  
 			"state": "running",				
 			"entryPoint": "index.html"
 		  }
-	]});
+	);
 });
 
 app.get("/dtv/15.3.1/apps", (req,res) => {
