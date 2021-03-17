@@ -144,6 +144,12 @@ app.get("/dtv/15.3.3/apps/65570", (req,res) => {
 	);
 });
 
+app.get("/dtv/current-service/numapps", (req,res) => {
+	res.json({
+		numOfApps: 1
+	});
+});
+
 app.get("/dtv/15.3.1/apps", (req,res) => {
 	res.json({ apps:[]});
 });
