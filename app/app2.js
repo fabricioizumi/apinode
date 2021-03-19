@@ -98,6 +98,7 @@ app.get("/dtv/current-service/0x10", (req, res) => {
 			streamContent: "0x6",
 			componentType: "0x03",
 			componentTag: "0x10",
+			streamType: "0x03",
 			ISO639languageCode: "por",
 			pid: 123,
 			state: "playing",
