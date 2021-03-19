@@ -26,8 +26,7 @@ app.get("/dtv/current-service/components", (req, res) => {
 			  {
 				streamContent: "0x02",					  
 				componentType: "0x06",					  
-				componentTag: "0x10",					  
-				ISO639languageCode: "por",					  
+				componentTag: "0x10",				
 				pid: 1234, 					  
 				state: "started",					  
 				pos:
@@ -36,10 +35,19 @@ app.get("/dtv/current-service/components", (req, res) => {
 				  w: 0,						  
 				  x: 0,						  
 				  y: 0
-				},					  
-				vol: 0,				
+				},			
 				streamType: "0x01"													  
-			  },			  
+			  },
+			  {
+				streamContent: "0x03",					  
+				componentType: "0x01",					  
+				componentTag: "0x11",					  
+				ISO639languageCode: "por",					  
+				pid: 456,		  
+				state: "started",									  
+				vol: 0,				
+				streamType: "0x03"													  
+			  }			  
 			]
 		  }
 	);
