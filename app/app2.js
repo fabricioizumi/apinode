@@ -55,19 +55,29 @@ app.get("/dtv/current-service/components", (req, res) => {
 
 app.get("/dtv/service-list", (req, res) => {
 	res.json(
-		{
-			"serviceList": 
-			[
-			  {
-				serviceContextId: "15.3.3",			  
-				serviceName: "nome",			  
-				transportStreamId: 123,			  
-				originalNetworkId: 65570,			  
-				serviceId: 0
-			  },
-			  
+		{"serviceList":
+			[	{
+					"originalNetworkId":10,
+					"serviceContextId":"15.3.1",
+					"serviceId":32,"serviceName":"Globo HD",
+					"transportStreamId":10
+				},
+				{
+					"originalNetworkId":10,
+					"serviceContextId":"15.3.2",
+					"serviceId":33,
+					"serviceName":"Relax",
+					"transportStreamId":10
+				},
+				{
+					"originalNetworkId":10,
+					"serviceContextId":"15.3.3",
+					"serviceId":34,
+					"serviceName":"The_Mag",
+					"transportStreamId":10
+				}
 			]
-		  }
+		}
 	);
 });
 
