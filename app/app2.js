@@ -189,6 +189,15 @@ app.get("/dtv/current-service/apps/65570/node-properties/123/", (req,res) => {
 		}
 	);
 });
+
+app.get("/dtv/current-service/apps/65570/node-properties/getfirstnode", (req,res) => {
+	res.json(
+		{
+			nodeId: "settings" 
+		}
+	);
+});
+
 const PORT = process.env.PORT || 3000
 
 app.listen(PORT, () => {
