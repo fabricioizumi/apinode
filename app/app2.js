@@ -173,6 +173,22 @@ app.get("/dtv/15.3.1/apps", (req,res) => {
 	res.json({ apps:[]});
 });
 
+app.get("/dtv/current-service/apps/65570/node-properties/123/", (req,res) => {
+	res.json(
+		{
+			nodeProperties:[
+				{
+					name: "service.currentFocus",
+					value: "1"
+				},
+				{
+					name:"shared.myAppOption",
+					value: "y"
+				}
+			]
+		}
+	);
+});
 const PORT = process.env.PORT || 3000
 
 app.listen(PORT, () => {
