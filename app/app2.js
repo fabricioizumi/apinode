@@ -208,7 +208,18 @@ app.get("/dtv/list-service-apps/", (req,res) => {
 });
 
 app.post("/dtv/list-service-apps/", (req,res) => {
-	var jsonData = JSON.parse(req.body.text());
+	const jsonDefault = res.json(
+		{
+			error: 345,
+			description: "Not any serviceContextId provided."
+			
+		}
+	);
+
+	if (req.body != undefined)
+		var jsonData = JSON.parse(req.body.text());
+	else
+		return jsonDefault;
 
 	if (jsonData.serviceContextId !== undefined){
 		res.json(
@@ -220,13 +231,7 @@ app.post("/dtv/list-service-apps/", (req,res) => {
 		);
 	}
 	else{
-		res.json(
-			{
-				error: 345,
-				description: "Not any serviceContextId provided."
-				
-			}
-		);
+		return jsonDefault;	
 	}
 });
 
