@@ -190,6 +190,46 @@ app.get("/dtv/current-service/apps/65570/node-properties/settings/", (req,res) =
 	);
 });
 
+app.get("/dtv/list-service-apps/", (req,res) => {
+	res.json(
+		{
+			serviceList:[
+				{
+					serviceContextId: 123,
+					appid: "1"
+				},
+				{
+					serviceContextId: 124,
+					appid: "2"
+				}
+			]
+		}
+	);
+});
+
+app.post("/dtv/list-service-apps/", (req,res) => {
+	var jsonData = JSON.parse(req.body.text());
+
+	if (jsonData.serviceContextId !== undefined){
+		res.json(
+			{
+				serviceContextId: 12345,
+				appid: "12"
+				
+			}
+		);
+	}
+	else{
+		res.json(
+			{
+				error: 345,
+				description: "Not any serviceContextId provided."
+				
+			}
+		);
+	}
+});
+
 app.get("/dtv/current-service/apps/65570/node-properties/getfirstnode", (req,res) => {
 	res.json(
 		{
