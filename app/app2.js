@@ -224,7 +224,7 @@ app.post("/dtv/list-service-apps/15.3.3", express.json({type: '*/*'}), (req,res)
 	if (jsonData.serviceContextId !== undefined){
 		res.json(
 			{
-				serviceContextId: 12345,
+				serviceContextId: '15.3.2',
 				appid: "12"
 				
 			}
