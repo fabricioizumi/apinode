@@ -207,7 +207,7 @@ app.get("/dtv/list-service-apps/", (req,res) => {
 	);
 });
 
-app.post("/dtv/list-service-apps/345", express.json({type: '*/*'}), (req,res) => {
+app.post("/dtv/list-service-apps/15.3.3", express.json({type: '*/*'}), (req,res) => {
 	const jsonDefault = {
 			error: 345,
 			description: "Not any serviceContextId provided."
