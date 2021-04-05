@@ -208,31 +208,38 @@ app.get("/dtv/list-service-apps/", (req,res) => {
 });
 
 app.post("/dtv/list-service-apps/15.3.3", express.json({type: '*/*'}), (req,res) => {
-	const jsonDefault = {
-			error: 345,
-			description: "Not any serviceContextId provided."
+	// const jsonDefault = {
+	// 		error: 345,
+	// 		description: "Not any serviceContextId provided."
 			
-		}	
+	// 	}	
 
-	var jsonData;
+	// var jsonData;
 	
-	if (req.body !== undefined)
-		jsonData = req.body;
-	else
-		return res.json(jsonDefault);
+	// if (req.body !== undefined)
+	// 	jsonData = req.body;
+	// else
+	// 	return res.json(jsonDefault);
 
-	if (jsonData.serviceContextId !== undefined){
-		res.json(
-			{
-				serviceContextId: '15.3.2',
-				appid: "12"
+	// if (jsonData.serviceContextId !== undefined){
+	// 	res.json(
+	// 		{
+	// 			serviceContextId: '15.3.2',
+	// 			appid: "12"
 				
-			}
-		);
-	}
-	else{
-		return res.json(jsonDefault);	
-	}
+	// 		}
+	// 	);
+	// }
+	// else{
+	// 	return res.json(jsonDefault);	
+	// }
+	res.json(
+		{
+			serviceContextId: '15.3.2',
+			appid: "12"
+			
+		}
+	);
 });
 
 app.get("/dtv/current-service/apps/65570/node-properties/getfirstnode", (req,res) => {
