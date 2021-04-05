@@ -241,7 +241,7 @@ app.post("/dtv/list-service-apps/15.3.3", express.json({type: '*/*'}), (req,res)
 		}
 	);
 });
-app.post("/dtv/list-anothers-apps/65570", express.json({type: '*/*'}), (req,res) => {	
+app.get("/dtv/list-anothers-apps/65570", express.json({type: '*/*'}), (req,res) => {	
 	res.json(
 		{
 			apps:[
