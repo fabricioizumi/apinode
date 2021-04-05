@@ -241,7 +241,28 @@ app.post("/dtv/list-service-apps/15.3.3", express.json({type: '*/*'}), (req,res)
 		}
 	);
 });
-
+app.post("/dtv/list-anothers-apps/65570", express.json({type: '*/*'}), (req,res) => {	
+	res.json(
+		{
+			apps:[
+				{			
+					appid: "12",
+					serviceContextId: "15.3.3"
+				},
+				{			
+					appid: "55",
+					serviceContextId: "15.3.1"
+				},
+				{			
+					appid: "6578",
+					serviceContextId: "15.3.3"
+				}
+			]
+		}
+		
+		
+	);
+});
 app.get("/dtv/current-service/apps/65570/node-properties/getfirstnode", (req,res) => {
 	res.json(
 		{
