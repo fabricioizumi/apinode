@@ -270,7 +270,25 @@ app.get("/dtv/current-service/apps/65570/node-properties/getfirstnode", (req,res
 		}
 	);
 });
-
+app.get("/dtv/current-service/apps/65570/files", (req,res) => {
+	res.json(
+		{
+			"files": [
+				{
+					"name": "file_1",
+					"size": 1000
+				},
+			
+			],
+			"dirs": [
+				{
+				"name": "folder_1",
+				},
+			
+			]
+		}
+	);
+});
 const PORT = process.env.PORT || 3000
 
 app.listen(PORT, () => {
