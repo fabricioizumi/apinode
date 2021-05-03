@@ -270,6 +270,16 @@ app.get("/dtv/current-service/apps/65570/node-properties/getfirstnode", (req,res
 		}
 	);
 });
+app.get("/dtv/current-service/ginga/persistent" ,(req, res) => {
+	res.json({
+		persistent:[
+			{
+				"name": "service.currentKeyMaster",
+				"value": ""
+			}
+		]
+	});
+});
 app.get("/dtv/current-service/apps/65570/files", (req,res) => {
 	res.json(
 		{
