@@ -274,6 +274,10 @@ app.get("/dtv/current-service/ginga/persistent" ,(req, res) => {
 	res.json({
 		persistent:[
 			{
+				"name": "service.MyVariable",
+				"value": ""
+			},
+			{
 				"name": "service.currentKeyMaster",
 				"value": ""
 			}
